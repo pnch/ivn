@@ -7,9 +7,12 @@
 }
 
 
+body {
+  height: 100%;
+}
+
 .mainWrapper {
   width: auto;
-  height: 100vh;
   display: flex;
   background-color: #FFF4D9;
 }
@@ -17,9 +20,8 @@
 .navWrapper{
   width: 15%;
   min-width: 200px;
-  
- 
   border-right: 1px solid #CCCCCC;
+  margin-right: 1px;
  }
 .contentWrapper {
   width: 85%;
@@ -107,4 +109,38 @@ h1 {
 .submenu a:hover {
   background: #F0FFAC;
  
+}
+
+
+#scroller-top {
+  width: 10px;
+  height: 10px;
+	position: fixed;
+	bottom: 100px;
+	left: 30px;
+	cursor: pointer;
+  display: none;
+  border-radius: 50%; 
+}
+  
+.far {
+  color: #CCCAC2;
+}
+.far:hover {
+  color: #A9A9A9;
+}
+
+@media (max-width: 640px) {
+  .mainWrapper {
+   flex-direction: column;
+   align-items: center;
+  }
+  .navWrapper {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .contentWrapper {
+    width: 100%;
+  }
 }
